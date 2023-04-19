@@ -1,0 +1,13 @@
+jtype: Flow
+version: '1'
+with:
+  port: 51000
+executors:
+  - name: clip_o
+    uses:
+      jtype: CLIPEncoder
+      with:
+        name: ViT-B/32
+      metas:
+        py_modules:
+          - clip_server.executors.clip_onnx
